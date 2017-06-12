@@ -50,5 +50,53 @@ http://ec2-52-56-213-33.eu-west-2.compute.amazonaws.com/movie/list?token=6d17f07
 
 http://ec2-52-56-213-33.eu-west-2.compute.amazonaws.com/booking/list?token=6d17f079-2186-49b9-97f3-7f45125b4486 
 
+Tables:
 
+CREATE TABLE `ApiUser` (
+  `userId` int(11) NOT NULL AUTO_INCREMENT,
+  `fullName` varchar(45) DEFAULT NULL,
+  `token` varchar(100) DEFAULT NULL,
+  `ipAddress` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`userId`),
+  UNIQUE KEY `token_UNIQUE` (`token`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `Booking` (
+  `bookingId` int(11) NOT NULL AUTO_INCREMENT,
+  `filmId` int(11) DEFAULT NULL,
+  `userId` int(11) DEFAULT NULL,
+  `reserveDate` timestamp NULL DEFAULT NULL,
+  `bookingTime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`bookingId`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `Film` (
+  `filmId` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(45) NOT NULL,
+  `description` varchar(300) NOT NULL,
+  `genre` varchar(45) DEFAULT NULL,
+  `rated` varchar(10) NOT NULL,
+  `showTime` time NOT NULL,
+  `director` varchar(45) NOT NULL,
+  `stars` varchar(100) NOT NULL,
+  `screenId` int(11) NOT NULL,
+  PRIMARY KEY (`filmId`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `Screen` (
+  `screenId` int(11) NOT NULL AUTO_INCREMENT,
+  `screenName` varchar(45) DEFAULT NULL,
+  `totalSeats` int(11) DEFAULT NULL,
+  PRIMARY KEY (`screenId`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `User` (
+  `userId` int(11) NOT NULL AUTO_INCREMENT,
+  `fullName` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`userId`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
