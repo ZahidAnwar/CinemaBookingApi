@@ -101,3 +101,9 @@ CREATE TABLE `User` (
   PRIMARY KEY (`userId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
+
+Further development:
+1. Chaching (e.g. ehcache, hibernate-ehcache)
+2. Complete all tests
+3. Method to check seat availability and notify api users
+4. End point for updating someone's booking
