@@ -19,9 +19,9 @@ A token is required to access the API (maximum character length is 100).
 
 MovieController
 
-To retrieve a list of the films showing at the cinema simply replace the token value, with valid token.
+To retrieve a list of the films showing at the cinema simply replace the token value, with a valid token.
 
-www.example.com/movie/list?token=thisistesttoken 
+/movie/list?token=%s 
 
 BookingController
 
@@ -36,9 +36,9 @@ Testing:
 
 ApiControllerTest.java
 
-BookingControllerTest.java
+BookingControllerTest.java (not completed yet.)
 
-MovieControllerTest.java
+MovieControllerTest.java (partially completed)
 
 
 Live AWS instance path:
