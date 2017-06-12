@@ -19,7 +19,7 @@
 		destroy-method="close">
 
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://localhost/Test_DB" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/Test_Db" />
 		<property name="user" value="root" />
 		<property name="password" value="TestDb81" />
 
