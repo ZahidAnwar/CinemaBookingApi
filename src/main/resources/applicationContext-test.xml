@@ -19,9 +19,9 @@
 		destroy-method="close">
 
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://192.168.0.5:3306/Test_DB" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost/Test_DB" />
 		<property name="user" value="root" />
-		<property name="password" value="Nishachor72" />
+		<property name="password" value="TestDb81" />
 
 		<property name="minPoolSize" value="5" />
 		<property name="maxPoolSize" value="10" />
